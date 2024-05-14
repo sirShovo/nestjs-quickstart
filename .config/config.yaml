@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  contextPath: /example-service
+app:
+  name: Base Project - Example Service
+  author: Softrizon IT Team
+cloud:
+  gcp:
+    pubsub:
+      projectId: nestjs-quickstart
+      config: {}
+      topics:
+        - topic: test.dev.v1
+          messages: 
+            - key: test-user-updated
+              message: cmd.send-test-email
+          subscriptions:
+            - key: test-user-created
+              subscription: test.dev.v1.example-service.evt.user-created.dev.v1
+            - key: test-user-deleted
+              subscription: test.dev.v1.example-service.evt.user-deleted.dev.v1

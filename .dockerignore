@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.git
+preview
+charts
+.lighthouse
+OWNERS*
+README.md
+.gitignore
+.nvmrc
+.prettierrc
